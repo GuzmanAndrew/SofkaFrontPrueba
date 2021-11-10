@@ -1,9 +1,33 @@
-<div>
-  <div class="container text-center">
-    <div><h2 style="font-family: 'Anton', sans-serif;">Bienvenido {{nombreUsuario}}</h2></div>
+<div class="d-flex justify-content-center">
+  <div class="p-2">
+    <div class="card">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-dark" (click)="greetEs()">
+          <img src="../../../assets/images/colombia.png" alt="ES" style="width: 30px;">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-2">
+    <div class="card">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-dark" (click)="greetEn()">
+          <img src="../../../assets/images/estados-unidos.png" alt="EN" style="width: 30px;">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-2">
+    <div class="card">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-dark" (click)="greetFr()">
+          <img src="../../../assets/images/francia.png" alt="FR" style="width: 30px;">
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-<br>
+
 <div class="card main-card mb-3" style="box-shadow: 5px 5px 6px grey;">
   <div class="app-header-left" style="margin: 9px 0 9px 16px;">
     <div class="search-wrapper" [class.active]="isActive">
@@ -20,7 +44,6 @@
       <th scope="col">Cedula</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
-      <th scope="col">Ver Paciente</th>
     </tr>
     </thead>
     <tbody>
@@ -28,9 +51,6 @@
         <td>{{persona.cedula}}</td>
         <td>{{persona.nombres}}</td>
         <td>{{persona.apellidos}}</td>
-        <td>
-          <a [routerLink]="['/info', persona.id]" class="btn btn-info btn-block" style="width: 20%;"><i class="fa fa-eye"></i></a>
-        </td>
       </tr>
     </tbody>
   </table>

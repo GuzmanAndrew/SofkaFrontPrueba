@@ -9,10 +9,9 @@ import {BaseLayoutComponent} from './Layout/base-layout/base-layout.component';
 import {LoginMedicoComponent} from './login/login-medico/login-medico.component';
 
 // Patients Lists
-import { PatientListComponent } from './DemoPages/patient-list/patient-list/patient-list.component';
+import { DashboardComponent } from './DemoPages/dashboard/dashboard.component';
 
 // Patient Info
-import { InformationPatientComponent } from './DemoPages/information-patient/information-patient.component';
 import { ProdGuardService } from './guard/prod-guard.service';
 
 const routes: Routes = [
@@ -24,11 +23,7 @@ const routes: Routes = [
 
       // Dashboads
 
-      {path: 'welcome', component: PatientListComponent, canActivate: [ProdGuardService], data: {extraParameter: 'dashboardsMenu'}},
-
-      // Tables
-
-      {path: 'info/:id', component: InformationPatientComponent, canActivate: [ProdGuardService], data: {extraParameter: 'tablesMenu'}},
+      {path: 'welcome', component: DashboardComponent, canActivate: [ProdGuardService], data: {extraParameter: 'dashboardsMenu'}},
 
     ]
 

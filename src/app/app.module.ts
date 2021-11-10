@@ -49,16 +49,6 @@ import { LoginMedicoComponent } from './login/login-medico/login-medico.componen
 import { FilterPipe } from './pipeslistapaciente/filter.pipe';
 
 import {NgxPaginationModule} from 'ngx-pagination';
-import { PatientListComponent } from './DemoPages/patient-list/patient-list/patient-list.component';
-import { PresionChartComponent } from './DemoPages/patient-charts/presion-chart/presion-chart.component';
-import { OxigenoChartComponent } from './DemoPages/patient-charts/oxigeno-chart/oxigeno-chart.component';
-import { FrecuenciaChartComponent } from './DemoPages/patient-charts/frecuencia-chart/frecuencia-chart.component';
-import { TemperaturaChartComponent } from './DemoPages/patient-charts/temperatura-chart/temperatura-chart.component';
-import { PresionTableComponent } from './DemoPages/patient-tables/presion-table/presion-table.component';
-import { OxigenoTableComponent } from './DemoPages/patient-tables/oxigeno-table/oxigeno-table.component';
-import { FrecuenciaTableComponent } from './DemoPages/patient-tables/frecuencia-table/frecuencia-table.component';
-import { TemperaturaTableComponent } from './DemoPages/patient-tables/temperatura-table/temperatura-table.component';
-import { InformationPatientComponent } from './DemoPages/information-patient/information-patient.component';
 
 // Angular Material
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -67,6 +57,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { UserDropdownComponent } from './Layout/Components/elements/user-dropdown/user-dropdown.component';
 
 import { interceptorProvider } from './interceptor/prod-interceptor.service';
+import { DashboardComponent } from './DemoPages/dashboard/dashboard.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -97,17 +88,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     
     LoginMedicoComponent,
     FilterPipe,
-    PatientListComponent,
-    PresionChartComponent,
-    OxigenoChartComponent,
-    FrecuenciaChartComponent,
-    TemperaturaChartComponent,
-    PresionTableComponent,
-    OxigenoTableComponent,
-    FrecuenciaTableComponent,
-    TemperaturaTableComponent,
-    InformationPatientComponent,
-    UserDropdownComponent
+    UserDropdownComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -45,6 +45,7 @@
     "node-gyp": "^7.1.2",
     "pe7-icon": "^1.0.4",
     "redux": "4.0.0",
+    "sweetalert2": "^11.1.10",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
