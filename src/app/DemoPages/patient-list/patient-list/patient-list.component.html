@@ -1,0 +1,38 @@
+<div>
+  <div class="container text-center">
+    <div><h2 style="font-family: 'Anton', sans-serif;">Bienvenido {{nombreUsuario}}</h2></div>
+  </div>
+</div>
+<br>
+<div class="card main-card mb-3" style="box-shadow: 5px 5px 6px grey;">
+  <div class="app-header-left" style="margin: 9px 0 9px 16px;">
+    <div class="search-wrapper" [class.active]="isActive">
+      <div class="input-holder">
+        <input type="text" class="search-input" id="filterPost" name="filterPost" placeholder="cedula o apellidos" [(ngModel)]="filterPost">
+        <button class="search-icon" (click)="isActive = true"><span></span></button>
+      </div>
+      <button class="close" (click)="isActive = false"></button>
+    </div>
+  </div>
+  <table class="table table-striped table-bordered" style="margin-left: 16px; width: 97% !important;">
+    <thead>
+    <tr>
+      <th scope="col">Cedula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Ver Paciente</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of personas | filter:filterPost | paginate: { itemsPerPage: 3, currentPage: p }">
+        <td>{{persona.cedula}}</td>
+        <td>{{persona.nombres}}</td>
+        <td>{{persona.apellidos}}</td>
+        <td>
+          <a [routerLink]="['/info', persona.id]" class="btn btn-info btn-block" style="width: 20%;"><i class="fa fa-eye"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

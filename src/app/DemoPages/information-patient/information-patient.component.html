@@ -1,0 +1,71 @@
+<div class="main-card mb-3 card" style="box-shadow: 5px 5px 6px grey;">
+  <div class="card-body">
+    <h5 class="card-title">Información Paciente</h5>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <p for="cedula">Cedula</p>
+          <input type="text" name="cedula" [(ngModel)]="paciente.cedula" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-4">
+          <p for="nombres">Nombres</p>
+          <input type="text" name="nombres" [(ngModel)]="paciente.nombres" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-4">
+          <p for="apellidos">Apellidos</p>
+          <input type="text" name="apellidos" [(ngModel)]="paciente.apellidos" class="form-control" disabled>
+        </div>
+      </div>
+      <!-- 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <p for="apellidos">Patoloia Hipertensiva</p>
+          <input type="text" name="patologia" [(ngModel)]="paciente.patologia" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-6">
+          <p for="apellidos">Patoloia Respiratoria</p>
+          <input type="text" name="patologiar" [(ngModel)]="paciente.patologiar" class="form-control" disabled>
+        </div>
+      </div> -->
+      
+    </form>
+  </div>
+</div>
+
+<div class="main-card mb-3 card">
+  <div class="card-body">
+    <mat-tab-group>
+      <mat-tab label="Presions Arterial">
+        <div class="tabContent">
+          <br>
+          <app-presion-chart></app-presion-chart>
+          <br>
+          <app-presion-table></app-presion-table>
+        </div>
+      </mat-tab>
+      <mat-tab label="Temperatura">
+        <div class="tabContent">
+          <br>
+            <app-temperatura-chart></app-temperatura-chart>
+            <br>
+            <app-temperatura-table></app-temperatura-table>
+        </div>
+      </mat-tab>
+      <mat-tab label="Oxigenación en sangre">
+        <div class="tabContent">
+          <br>
+          <app-oxigeno-chart></app-oxigeno-chart>
+          <br>
+          <app-oxigeno-table></app-oxigeno-table>  
+        </div>
+      </mat-tab>
+      <mat-tab label="Frecuencia Cardiaca">
+        <div class="tabContent">
+          <app-frecuencia-chart></app-frecuencia-chart>
+          <br>
+          <app-frecuencia-table></app-frecuencia-table>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
